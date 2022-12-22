@@ -1,71 +1,90 @@
-https://github.com/SheykoWk/Red-Social-API
-
-
-
 # Red Social API
 
-### Url base: http://localhost:9000/api/v1
+### Develpment Url base: http://localhost:9000/api/v1
+### Production Url base: https://social-net-one.onrender.com/api/v1
 
 - /auth
-
   - /login -> Login con las credenciales del usuario para autenticar
 
 - /posts
-
   - /me -> Mis propias publicaciones
   - /user/:id -> Publicaciones de usuarios en particular
   - /:id -> Una publicación en especifico
   - /:id/comments -> Los comentarios de una publicación en especifico
   - /:id/likes -> Los likes de una publicación en especifico
 
+- /follows
+  - /:id -> Lista de usarios a los que sigo
+- /followers
+  - /:id -> Lista de usarios que me siguen
+
+- /users
+  - /:id -> Un usuario en especifico
+  - /:id/follow -> Post - para seguir a un usuario
+
 - /users
   - /me -> Mi informacion de usuario
-  - /:id -> Un usuario en especifico
-  - /:id/follow
+  
+- /users
+  - /me/follows -> Lista de usarios a los que sigo
+  - /me/followers -> Lista de usarios que me siguen
 
-example ecommerce: /product/:id/add-to-cart
-
-- /follows
-
-  - /:id
-
-- /followers
-  - /:id
+- /posts
+  - /:id  -> Una publicación en especifico
+  - /:id/likes -> Get para recoger estadística, post para dar Like
+  - /:id/comments -> Get de toda la lista y post para agregar un comentario
 
 ### Controllers Posts
-
 - [x] findAllPosts
 - [x] findPostById
 - [x] createPost
 - [x] updatePost
 - [x] removePost
+- [ ] findMyPosts
+- [ ] findPostsByUser
 
 ### Services Posts
-- [ ] getAllPosts
-- [ ] getPostById
-- [ ] postNewPost 
-- [ ] patchPost
-- [ ] deletePost
+- [x] getAllPosts
+- [x] getPostById
+- [x] postNewPost 
+- [x] patchPost
+- [x] deletePost
+- [ ] getMyPosts
+- [ ] getPostsByUser
 
+### Controllers Follows
+- [x] followUser
+- [x] findMyFollowers
+- [x] findMyFollowings
 
-retirado de package.json__::::
+### Services Follows
+- [x] postFollower
+- [x] getMyFollowers
+- [x] getMyFollowings
 
-,
-  "devDependencies": {
-    "chai": "^4.3.7",
-    "chai-http": "^4.3.0",
-    "mocha": "^10.1.0",
-    "nodemon": "^2.0.20"
-  }
+### Controllers Likes
+- [x] findAllLikesFromPost
+- [x] createLike (Togle)
 
--------------------------------------------------
+### Services Likes
+- [x] getAllLikesByPost
+- [x] postLike (Togle)
 
-  https://editor.swagger.io/
+### Controllers Comments
+- [x] findAllCommentsFromPost
+- [x] createComment
+- [ ] editComment
+- [ ] removeComment
 
+### Services Comments
+- [x] getAllLikesByPost
+- [x] postLike
+- [ ] patchComment
+- [ ] deleteComment
 
-  ------------------------------------------
-
-https://academlo.notion.site/Mocha-y-Chai-accab4aab477410e9bfd97d84c101e59
-
-
+### Swagger
+- [ ] https://editor.swagger.io/
+ 
+### Testing
+- [ ] https://academlo.notion.site/Mocha-y-Chai-accab4aab477410e9bfd97d84c101e59
 

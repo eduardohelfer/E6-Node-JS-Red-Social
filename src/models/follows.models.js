@@ -9,25 +9,25 @@ const Follows = db.define('follows', {
     type: DataTypes.UUID,
     primaryKey: true
   },
-  userId: {
+  follower: {
     type: DataTypes.UUID,
     allowNull: false,
-    field: 'follower',
+    // field: 'follower',
     references: {
       key: 'id',
       model: Users
     },
-    comment: 'follower'
+    comment: 'follower users'
   },
-  userId2: {
+  followed: {
     type: DataTypes.UUID,
     allowNull: false,
-    field: 'followed',
+    // field: 'followed',
     references: {
       key: 'id',
       model: Users
     },
-    comment: 'followed'
+    comment: 'followed users'
   }
 }, {
   uniqueKeys: {
