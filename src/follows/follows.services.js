@@ -1,4 +1,3 @@
-const { restart } = require('nodemon')
 const followControllers = require('./follows.controllers')
 
 const postFollower = (req, res) => {
