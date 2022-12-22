@@ -31,8 +31,8 @@ const Follows = db.define('follows', {
   }
 }, {
   uniqueKeys: {
-    Follows_unique: {
-      fields: ['userId', 'userId2']
+    follows_unique: {
+      fields: ['follower', 'followed']
     }
   }
 }

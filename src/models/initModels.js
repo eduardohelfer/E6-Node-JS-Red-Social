@@ -23,8 +23,8 @@ const initModels = () => {
     Likes.belongsTo(Posts)
 
     //? Users -- Follows 
-    Follows.belongsTo(Users, { foreignKey: 'userId', as: 'Follower' })
-    Follows.belongsTo(Users, { foreignKey: 'userId2', as: 'Followed' })
+    Follows.belongsTo(Users, { foreignKey: 'userId', as: 'follower' })
+    Follows.belongsTo(Users, { foreignKey: 'userId2', as: 'followed' })
 
 }
 

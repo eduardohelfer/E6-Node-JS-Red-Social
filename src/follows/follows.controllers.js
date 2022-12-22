@@ -19,11 +19,11 @@ const findMyFollowers = async (userId) => {
     },
     include: {
       model: Users,
-      as: 'Follower',
+      as: 'follower',
       attributes: ['id', 'firstName', 'lastName']
     }
   })
-  return data
+  return data.map(item => item.follower)
 }
 
 const findMyFollowings = async (userId) => {
@@ -33,11 +33,11 @@ const findMyFollowings = async (userId) => {
     },
     include: {
       model: Users,
-      as: 'Followed',
+      as: 'followed',
       attributes: ['id', 'firstName', 'lastName']
     }
   })
-  return data
+  return data.map(item => item.followed)
 }
 
 module.exports = {
