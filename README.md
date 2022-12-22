@@ -48,4 +48,24 @@ example ecommerce: /product/:id/add-to-cart
 - [ ] deletePost
 
 
+retirado de package.json__::::
+
+,
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.1.0",
+    "nodemon": "^2.0.20"
+  }
+
+-------------------------------------------------
+
+  https://editor.swagger.io/
+
+
+  ------------------------------------------
+
+https://academlo.notion.site/Mocha-y-Chai-accab4aab477410e9bfd97d84c101e59
+
+
 
